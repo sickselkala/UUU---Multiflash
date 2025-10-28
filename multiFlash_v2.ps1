@@ -23,7 +23,7 @@
     (Esegue lo script con i percorsi di default)
 
 .EXAMPLE
-    .\Seco-MultiFlash-v2.ps1 -UuuExe "C:\flasher\uuu.exe" -UuuScript "C:\flasher\script.auto"
+    .\MultiFlash-v2.ps1 -UuuExe "C:\flasher\uuu.exe" -UuuScript "C:\flasher\script.auto"
     (Esegue lo script specificando percorsi personalizzati)
 
 .VERSION
@@ -38,8 +38,8 @@
 
 # ==================== SEZIONE 1: CONFIGURAZIONE====================
 param (
-    [string]$UuuExe = "D:\SECO\release-6.4-tvm32-flasher\sysroots\cortexa9t2hf-neon-fslc-linux-gnueabi\usr\share\sigma-flasher\uuu.exe",
-    [string]$UuuScript = "D:\SECO\release-6.4-tvm32-flasher\sysroots\cortexa9t2hf-neon-fslc-linux-gnueabi\usr\share\sigma-flasher\uuu.auto",
+    [string]$UuuExe = "yourpath\uuu.exe",
+    [string]$UuuScript = "yourpath\uuu.auto",
     [string]$DevicePrefix = "Device",
     [string]$LogFile = ".\multiflash_main.log"
 )
@@ -159,7 +159,7 @@ exit /b %errorlevel%
                 # Aggiungi ai job completati per la UI
                 $completedJobs.Add([PSCustomObject]@{
                     Name     = $info.Name
-                    Port     = $info.Port # <-- MODIFICATO: Aggiunta della porta
+                    Port     = $info.Port 
                     Status   = $status
                     Duration = $duration.ToString('g')
                     EndTime  = $endTime.ToString('HH:mm:ss')
