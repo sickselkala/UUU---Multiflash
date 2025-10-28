@@ -2,7 +2,7 @@
 
 Uno script PowerShell per il flashing parallelo di più dispositivi utilizzando l'utility `uuu` (Universal Update Utility) di NXP. Lo script monitora le connessioni USB, avvia processi di flashing indipendenti per ogni dispositivo rilevato e fornisce un'interfaccia utente dinamica nel terminale per monitorare lo stato in tempo reale.
 
-## Prerequisiti
+##
 
 Questo script **non include** UUU. È necessario aver già installato lo strumento UUU ufficiale, disponibile qui:
 * **Repository Ufficiale NXP UUU:** [https://github.com/nxp-imx/mfgtools](https://github.com/nxp-imx/mfgtools)
